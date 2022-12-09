@@ -6,7 +6,7 @@
         <groupId>com.xuecheng</groupId>
         <artifactId>xuecheng-plus-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../xuecheng-plus-parent</relativePath>
+        <relativePath>xuecheng-plus-parent</relativePath>
     </parent>
 
 
