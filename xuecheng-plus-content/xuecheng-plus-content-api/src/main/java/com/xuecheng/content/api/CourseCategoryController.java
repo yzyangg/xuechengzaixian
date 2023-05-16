@@ -13,24 +13,34 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
+ * The type Course category controller.
+ *
  * @author mrt
  * @version 1.0
  * @description TODO
- * @date 2022/12/10 10:04
+ * @date 2022 /12/10 10:04
  */
 @Slf4j
 @Api(value = "课程分类相关接口", tags = "课程分类相关接口")
 @RestController
 public class CourseCategoryController {
 
+    /**
+     * The Course category service.
+     */
     @Resource
     CourseCategoryService courseCategoryService;
 
+
+    /**
+     * Query tree nodes list.
+     *
+     * @return the list
+     */
     @ApiOperation("课程分类查询接口")
     @GetMapping("/course-category/tree-nodes")
     public List<CourseCategoryTreeDto> queryTreeNodes() {
-        List<CourseCategoryTreeDto> courseCategoryTreeDtos = courseCategoryService.queryTreeNodes("1");
-        return courseCategoryTreeDtos;
+        return courseCategoryService.queryTreeNodes("1");
     }
 
 }

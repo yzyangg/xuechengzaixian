@@ -3,15 +3,18 @@ package com.xuecheng.content.model.dto;
 import com.xuecheng.content.model.po.CourseCategory;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
+import java.util.Scanner;
 
 /**
- * @author mrt
+ * @author yzy
  * @version 1.0
  * @description TODO
- * @date 2022/12/10 10:08
+ * @date
  */
 @Data
-public class CourseCategoryTreeDto extends CourseCategory {
- List childrenTreeNodes;
+public class CourseCategoryTreeDto extends CourseCategory implements Serializable {
+    List<CourseCategoryTreeDto> childrenTreeNodes;
+
 }

@@ -6,31 +6,51 @@ import lombok.ToString;
 import java.util.List;
 
 /**
- * @description TODO
+ * 页面结果
+ *
+ * @param <T> the type parameter
  * @author Mr.M
- * @date 2022/10/7 16:17
  * @version 1.0
+ * @description TODO
+ * @date 2022 /10/7 16:17
  */
- @Data
- @ToString
+@Data
+@ToString
 public class PageResult<T> {
-  // 数据列表
-  private List<T> items;
+    /**
+     * The Items.
+     */
+    private List<T> items;
 
-  //总记录数
-  private long counts;
+    /**
+     * The Counts.
+     */
+    private long counts;
 
-  //当前页码
-  private long page;
+    /**
+     * The Page.
+     */
+    private long page;
 
-  //每页记录数
-  private long pageSize;
+    /**
+     * The Page size.
+     */
+    private long pageSize;
 
-  public PageResult(List<T> items, long counts, long page, long pageSize) {
-   this.items = items;
-   this.counts = counts;
-   this.page = page;
-   this.pageSize = pageSize;
-  }
 
- }
+    /**
+     * Instantiates a new Page result.
+     *
+     * @param items    the items
+     * @param counts   the counts
+     * @param page     the page
+     * @param pageSize the page size
+     */
+    public PageResult(List<T> items, long counts, long page, long pageSize) {
+        this.items = items;
+        this.counts = counts;
+        this.page = page;
+        this.pageSize = pageSize;
+    }
+
+}

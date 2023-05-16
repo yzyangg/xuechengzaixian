@@ -8,10 +8,10 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
- * @author itcast
+ * @author yzy
  */
 @Data
 @TableName("teachplan_media")

@@ -16,22 +16,28 @@ POST {{content_host}}/content/course
 Content-Type: application/json
 
 {
-
   "mt": "1-1",
   "st": "1-1-1",
-  "name": "测试课程112",
+  "name": "",
   "pic": "",
   "teachmode": "200002",
   "users": "初级人员",
   "tags": "标签",
-  "grade": "204001",
+  "grade": "-204001",
   "description": "课程介绍",
   "charge": "201001",
-  "price": "",
-  "originalPrice":"",
+  "price": "-1000",
+  "originalPrice": "10000",
   "qq": "43232",
   "wechat": "4324322",
   "phone": "432432",
   "validDays": 365
 }
 
+### 课程详情
+GET {{content_host}}/content/course/40
+Content-Type: application/json
+
+
+### 课程计划查询
+GET {{content_host}}/content/teachplan/117/tree-nodes

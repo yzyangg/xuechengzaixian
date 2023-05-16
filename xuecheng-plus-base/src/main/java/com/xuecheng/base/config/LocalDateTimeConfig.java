@@ -9,37 +9,40 @@ import org.springframework.context.annotation.Configuration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+
 /**
- * @author mrt
- * @version 1.0
- * @description TODO
- * @date 2022/12/9 10:54
+ * The type Local date time config.
  */
 @Configuration
 public class LocalDateTimeConfig {
 
-    /*
-     * 序列化内容
-     *   LocalDateTime -> String
-     * 服务端返回给客户端内容
-     * */
+    /**
+     * Local date time serializer local date time serializer.
+     *
+     * @return the local date time serializer
+     */
     @Bean
     public LocalDateTimeSerializer localDateTimeSerializer() {
         return new LocalDateTimeSerializer(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
-    /*
-     * 反序列化内容
-     *   String -> LocalDateTime
-     * 客户端传入服务端数据
-     * */
+    /**
+     * Local date time deserializer local date time deserializer.
+     *
+     * @return the local date time deserializer
+     */
     @Bean
     public LocalDateTimeDeserializer localDateTimeDeserializer() {
         return new LocalDateTimeDeserializer(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
 
-    // 配置
+    /**
+     * Jackson 2 object mapper builder customizer jackson 2 object mapper builder customizer.
+     *
+     * @return the jackson 2 object mapper builder customizer
+     */
+
     @Bean
     public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer() {
         return builder -> {
